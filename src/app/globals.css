@@ -1,3 +1,4 @@
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -38,5 +39,25 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  
+}
+.logo{
+  width: 280px;
+  padding:10px;
+  margin-left: 250px;
+}
+
+@media screen and (max-width:786px){
+  .logo{
+    margin-left: 90px;
+    width: 200px;
   }
 }

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap');
+
+
+.ingredients-section {
+    font-family: 'Jost';
+    margin-top: 220px;
+    padding: 40px 80px;
+}
+
+.ingredients-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.ingredients-header {
+    text-align: left;
+    width: 34.5%;
+}
+
+.ingredients-header p:first-child {
+    color: #03577A;
+    font-weight: bold;
+}
+
+.ingredients-header h2 {
+    font-size: 2.5rem;
+    color: #04344A;
+    margin-bottom: 10px;
+}
+
+.ingredients-header p:last-child {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+.content1 {
+    background-image: url('/vitamin_c.png');
+}
+
+.content2 {
+    background-image: url('/vitamin_b3.png');
+}
+
+.content3 {
+    background-image: url('/magnesium.png');
+}
+
+.content4 {
+    background-image: url('/hyaluronic_acid.png');
+}
+
+.content5 {
+    background-image: url('/lactobacillus.png');
+}
+
+.ingredient-content {
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 240px;
+    /* width: 370px; */
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.ingredient-content h3 {
+    font-size: 1.25rem;
+    color: #04344A;
+}
+
+.ingredient-content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.top-content {
+    text-align: left;
+}
+
+.see-more {
+
+    text-decoration: none;
+    color: #04344A;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #04344A;
+}
+
+.thumb-image {
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .ingredients-section {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .ingredients-header h2 {
+        font-size: 2.0rem;
+        margin-bottom: 10px;
+    }
+
+    .ingredients-header p:last-child {
+        font-size: 0.7rem;
+    }
+
+    .ingredients-header {
+        text-align: left;
+        width: 100%;
+    }
+
+    .thumb-image {
+        display: none;
+    }
+
+    .ingredient-content {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .ingredients-section {
+        margin-top: 230px;
+        padding: 20px;
+    }
+
+
+
+    .thumb-image {
+        display: none;
+    }
+
+    .ingredient-content {
+        width: 45%;
+    }
+}

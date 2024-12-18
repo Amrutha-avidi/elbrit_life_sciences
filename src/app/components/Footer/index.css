@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playpen+Sans:wght@300&family=Poppins:wght@300;400&family=Roboto+Slab:wght@500&display=swap');
+
+.footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #17414F;
+    color: white;
+    padding: 20px 150px;
+    font-family: 'jost';
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.phone-email-location {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    /* flex-wrap: wrap; Allow wrapping for better responsiveness */
+}
+
+.footer-sub {
+    background-color: #215D72;
+    padding: 10px 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    gap: 20px;
+    width: auto;
+}
+
+.footer-sub img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-sub-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-sub-content-para1 {
+    font-weight: 400;
+}
+
+.footer-sub-content-para2 {
+    font-weight: 500;
+}
+
+.logo-context {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.logo-context img {
+    background-color: white;
+    padding: 10px;
+}
+
+.logo-context-para {
+    font-size: 15px;
+    font-weight: 300;
+    width: 370px;
+}
+
+.location{
+    font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+    .phone-email-location {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 20px;
+        /* padding:0 40px; */
+    }
+
+    .footer-sub {
+       
+        padding: 10px;
+        gap: 20px;
+        width: 90%; /* Make it take up most of the screen */
+        max-width: 350px; /* Optional: Prevent stretching too wide */
+    }
+
+    .logo-context {
+        order: -1;
+    }
+    .logo-context{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .logo-context img{
+        padding: 7px;
+    }
+    .logo-context-para{
+        width: 300px;
+    }
+    .location{
+        font-size: 50px;
+    }
+
+}
