@@ -46,7 +46,7 @@ export default function Features() {
                 {features.map((feature, index) => (
                     <div className="feature-card" key={index}>
                         <div className='img-con'>
-                            <img src={feature.imgSrc} alt={feature.imgAlt} />
+                            <img src={feature.imgSrc} alt={feature.imgAlt} loading="lazy" />
                         </div>
                         <p className="feature-title">{feature.title}</p>
                         <p className="feature-description">{feature.description}</p>

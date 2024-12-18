@@ -1,65 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playpen+Sans:wght@300&family=Poppins:wght@300;400&family=Roboto+Slab:wght@500&display=swap');
 
+/* General styling for Latest News */
 .latest-news {
+    text-align: center;
+    padding: 20px;
+    margin: 0px 150px;
+    font-family: 'Jost';
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Jost';
+}
+
+.latest-news h4 {
+    font-size: 18px;
     color: #17414F;
 }
 
+.latest-news h1 {
+    font-size: 32px;
+    color: #17414F;
+    margin-bottom: 20px;
+}
 
-.cards-container {
+/* Grid layout for cards */
+.colos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    height: 300px;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-}
-
-.card-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    width: 100%;
-}
-
-.date {
-    background-color: #0d6efd;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    grid-template-columns: repeat(4, minmax(320px, 1fr));
+    grid-auto-rows: 200px;
+    /* Default row height */
+    gap: 30px;
+    /* Gap between cards */
+    padding: 0 40px;
 }
 
 .title {
-    margin: 10px 0 0;
-    font-size: 1.2rem;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+
 }
 
-/* Responsive behavior for smaller screens */
+/* General card styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+
+}
+
+.date {
+    position: relative;
+    text-align: center;
+    left: -28px;
+    top: -10px;
+    width: 100px;
+    background-color: #003569;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+/* Dynamic heights for specific cards */
+.card[data-id="1"],
+.card[data-id="3"],
+.card[data-id="5"],
+.card[data-id="6"] {
+    grid-row: span 2;
+    /* Taller cards span 2 rows */
+}
+.card[data-id="2"],
+.card[data-id="4"],
+.card[data-id="7"],
+.card[data-id="8"] {
+    background-position: 50% 4%;
+    /* Taller cards span 2 rows */
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 998px) {
+    .latest-news {
+        padding: 10px;
+        margin: 0px 50px;
+        width: 90%;
+    }
+    .colos {
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 columns */
+        grid-auto-rows: 150px; /* Adjusted row height */
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 20px;
+    
+    }
+}
+
 @media screen and (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        /* Stack cards vertically */
+    .latest-news {
+        padding: 5px;
+        margin: 0px 5px;
+        width: 100%;
     }
-
-    .card {
-        height: 250px;
+    .colos {
+        grid-template-columns: 1fr; /* 1 column */
+        grid-auto-rows: 150px; /* Adjusted row height */
     }
 }
+
+

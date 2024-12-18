@@ -7,7 +7,7 @@ import { global } from "styled-jsx/css";
 export default function Home() {
   return (
     <div className="main">
-      <img className="logo"  src='/logo.png' slt='logo' />
+      <img className="logo"  src='/logo.png' slt='logo' loading="lazy" />
       <div className="section-con">
         <MainSection />
         <Ingredients />
